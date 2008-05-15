@@ -6,9 +6,13 @@ Module::Build->new(
     license            => 'perl',
     create_makefile_pl => 'passthrough',
     configure_requires => { 'Module::Build' => '0.2701' },
-    build_requires     => { 'Module::Build' => '0.2701' },
+    build_requires     => {
+        'Test::More'    => '0.17',
+        'Module::Build' => '0.2701',
+    },
     requires           => {
         'SVN::Notify'    => '2.70',
         'Text::Markdown' => 0,
+        'HTML::Entities' => 0,
     },
 )->create_build_script;

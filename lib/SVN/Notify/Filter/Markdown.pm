@@ -1,11 +1,11 @@
 package SVN::Notify::Filter::Markdown;
 
-# $Id: Markdown.pm 3589 2008-04-02 05:06:25Z theory $
+# $Id: Markdown.pm 3866 2008-05-09 19:29:35Z david $
 
 use strict;
 use Text::Markdown ();
 use SVN::Notify ();
-$SVN::Notify::Filter::Markdown::VERSION = '0.01';
+$SVN::Notify::Filter::Markdown::VERSION = '0.02';
 
 sub log_message {
     my ($notify, $lines) = @_;
@@ -84,10 +84,10 @@ nicely formatted.
 
 This module is stored in an open repository at the following address:
 
-  L<https://svn.kineticode.com/SVN-Notify-Filter-Markdown/trunk/>
+L<https://svn.kineticode.com/SVN-Notify-Filter-Markdown/trunk/>
 
-Patches against SVN::Notify are welcome. Please send bug reports to
-<bug-svn-notify-filter-markdown@rt.cpan.org>.
+Patches against SVN::Notify::Filter::Markdown are welcome. Please send bug
+reports to <bug-svn-notify-filter-markdown@rt.cpan.org>.
 
 =head1 Author
 
@@ -104,7 +104,7 @@ David E. Wheeler <david@kineticode.com>
 
 =head1 Copyright and License
 
-Copyright (c) 2008 Kineticode, Inc. All Rights Reserved.
+Copyright (c) 2008 David Wheeler. Some Rights Reserved.
 
 This module is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself.

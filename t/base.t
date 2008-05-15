@@ -1,6 +1,6 @@
 #!/usr/bin/perl -w
 
-# $Id: base.t 3586 2008-04-02 04:58:00Z theory $
+# $Id: base.t 3894 2008-05-15 03:16:59Z david $
 
 use strict;
 use Test::More tests => 9;
@@ -17,6 +17,7 @@ isa_ok my $n = SVN::Notify->new(
     revision   => 42,
     handler    => 'HTML',
     filters    => [ 'Markdown' ],
+    smtp       => 'localhost',
 ), 'SVN::Notify::HTML', 'Create HTML notifier';
 
 ok $n->message( [ @log ] ), 'Add our custom log message';
@@ -30,6 +31,7 @@ isa_ok $n = SVN::Notify->new(
     repos_path => '/foo/bar',
     revision   => 42,
     filters    => [ 'Markdown' ],
+    smtp       => 'localhost',
 ), 'SVN::Notify', 'Create non-HTML notifier';
 
 ok $n->message( [ @log ] ), 'Add our custom log message';
