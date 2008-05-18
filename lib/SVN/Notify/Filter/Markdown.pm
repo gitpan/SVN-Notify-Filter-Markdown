@@ -1,11 +1,11 @@
 package SVN::Notify::Filter::Markdown;
 
-# $Id: Markdown.pm 3866 2008-05-09 19:29:35Z david $
+# $Id: Markdown.pm 3897 2008-05-15 03:20:57Z david $
 
 use strict;
 use Text::Markdown ();
 use SVN::Notify ();
-$SVN::Notify::Filter::Markdown::VERSION = '0.02';
+$SVN::Notify::Filter::Markdown::VERSION = '0.03';
 
 sub log_message {
     my ($notify, $lines) = @_;
