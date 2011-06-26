@@ -1,11 +1,9 @@
 package SVN::Notify::Filter::Markdown;
 
-# $Id: Markdown.pm 3925 2008-05-18 03:38:04Z david $
-
 use strict;
 use Text::Markdown ();
 use SVN::Notify ();
-$SVN::Notify::Filter::Markdown::VERSION = '0.04';
+$SVN::Notify::Filter::Markdown::VERSION = '0.05';
 
 sub log_message {
     my ($notify, $lines) = @_;
@@ -15,17 +13,6 @@ sub log_message {
 }
 
 1;
-
-=begin comment
-
-Fake-out Module::Build. Delete if it ever changes to support =head1 headers
-other than all uppercase.
-
-=head1 NAME
-
-SVN::Notify::Filter::Markdown - Convert SVN::Notify log messages from Markdown to HTML
-
-=end comment
 
 =head1 Name
 
@@ -82,29 +69,22 @@ nicely formatted.
 
 =head1 Support
 
-This module is stored in an open repository at the following address:
+This module is stored in an open L<GitHub
+repository|http://github.com/theory/svn-notify-filter-markdown/>. Feel free to
+fork and contribute!
 
-L<https://svn.kineticode.com/SVN-Notify-Filter-Markdown/trunk/>
-
-Patches against SVN::Notify::Filter::Markdown are welcome. Please send bug
-reports to <bug-svn-notify-filter-markdown@rt.cpan.org>.
+Please file bug reports via L<GitHub
+Issues|http://github.com/theory/svn-notify-filter-markdown/issues/> or by
+sending mail to
+L<bug-SVN-Notify-Filter-Markdown@rt.cpan.org|mailto:bug-SVN-Notify-Filter-Markdown@rt.cpan.org>.
 
 =head1 Author
 
-=begin comment
-
-Fake-out Module::Build. Delete if it ever changes to support =head1 headers
-other than all uppercase.
-
-=head1 AUTHOR
-
-=end comment
-
-David E. Wheeler <david@kineticode.com>
+David E. Wheeler <david@justatheory.com>
 
 =head1 Copyright and License
 
-Copyright (c) 2008 David Wheeler. Some Rights Reserved.
+Copyright (c) 2008-2011 David E. Wheeler. Some Rights Reserved.
 
 This module is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself.
